@@ -1,0 +1,183 @@
+:root{
+  --bg:#F6F2FF;
+  --surface:#FFFFFF;
+  --lav:#6D63FF;
+  --lav2:#8A84FF;
+  --warm:#FFB86B;
+  --warm2:#FFD7A8;
+  --text:#1F2937;
+  --muted:#6B7280;
+  --border:#E6E1FF;
+  --shadow2:0 10px 22px rgba(35,20,120,0.07);
+  --r:18px;
+  --pill:999px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Open Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(900px 500px at 20% 0%, rgba(109,99,255,0.12), transparent 60%),
+    radial-gradient(800px 450px at 90% 10%, rgba(255,184,107,0.12), transparent 60%),
+    var(--bg);
+}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:18px 16px}
+header.site-header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(246,242,255,0.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.navbar{max-width:1100px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Nunito",system-ui,sans-serif;font-weight:900;font-size:20px}
+.brand-badge{
+  width:34px;height:34px;border-radius:14px;
+  background:linear-gradient(135deg, rgba(109,99,255,0.26), rgba(255,184,107,0.20));
+  border:1px solid rgba(109,99,255,0.22);
+  box-shadow:var(--shadow2);
+  display:grid;place-items:center;
+}
+.navlinks{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.navlinks a{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 12px;border-radius:var(--pill);
+  font-size:14px;
+  background:rgba(255,255,255,0.65);
+  border:1px solid rgba(109,99,255,0.12);
+}
+.navlinks a:hover{background:rgba(255,255,255,0.85)}
+.navlinks a.active{
+  background: rgba(109,99,255,0.20);
+  border-color:rgba(109,99,255,0.22);
+}
+.nav-heart{
+  width:38px;height:38px;border-radius:14px;
+  border:1px solid rgba(109,99,255,0.14);
+  background:rgba(255,255,255,0.70);
+  display:grid;place-items:center;
+}
+h1,h2,h3{font-family:"Nunito",system-ui,sans-serif;margin:0 0 10px 0}
+h1{font-size:36px;letter-spacing:-0.2px}
+h2{font-size:24px}
+.small{color:var(--muted);font-size:14px}
+.card{
+  background:rgba(255,255,255,0.93);
+  border:1px solid var(--border);
+  border-radius:var(--r);
+  box-shadow:var(--shadow2);
+}
+.card.pad{padding:18px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+@media (max-width:900px){.hero{grid-template-columns:1fr}}
+.soft-panel{
+  background:linear-gradient(135deg, rgba(109,99,255,0.10), rgba(255,184,107,0.08));
+  border:1px solid rgba(109,99,255,0.14);
+  border-radius:var(--r);
+  padding:16px;
+}
+.list-tile{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:12px 14px;border-radius:16px;
+  border:1px solid rgba(109,99,255,0.14);
+  background:rgba(255,255,255,0.92);
+  box-shadow:0 8px 18px rgba(35,20,120,0.06);
+}
+.left{display:flex;align-items:center;gap:10px}
+.icon-pill{
+  width:34px;height:34px;border-radius:14px;
+  background:linear-gradient(135deg, rgba(109,99,255,0.18), rgba(255,184,107,0.12));
+  border:1px solid rgba(109,99,255,0.14);
+  display:grid;place-items:center;
+}
+.chev{font-weight:900;font-size:20px;color:rgba(31,41,55,0.55)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:12px 16px;min-height:44px;
+  border-radius:16px;border:1px solid transparent;
+  cursor:pointer;
+  font-family:"Nunito",system-ui,sans-serif;font-weight:900;
+  font-size:17px;
+}
+.btn.primary{
+  background: var(--lav2);
+  color:#fff;
+  box-shadow:0 14px 24px rgba(109,99,255,0.20);
+}
+.btn.warm{
+  background: var(--warm);
+  color:#3B2B0E;
+  border:1px solid rgba(255,184,107,0.45);
+}
+.btn.ghost{
+  background:rgba(255,255,255,0.85);
+  border:1px solid rgba(109,99,255,0.16);
+}
+.btn-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.output{
+  padding:18px;border-radius:18px;
+  border:1px solid rgba(109,99,255,0.14);
+  background:linear-gradient(135deg, rgba(109,99,255,0.10), rgba(255,184,107,0.08));
+}
+.output .label{color:var(--muted);font-size:13px;margin-bottom:8px}
+.output .text{font-size:18px;line-height:1.55;font-weight:800}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+.tile{
+  padding:14px;border-radius:18px;
+  border:1px solid rgba(109,99,255,0.14);
+  background:rgba(255,255,255,0.92);
+  box-shadow:0 8px 18px rgba(35,20,120,0.06);
+}
+.tile .title{font-family:"Nunito",system-ui,sans-serif;font-weight:900;font-size:18px}
+.tile .meta{color:var(--muted);font-size:14px}
+input,select,textarea{
+  width:100%;
+  padding:12px 12px;min-height:44px;
+  border-radius:14px;
+  border:1px solid rgba(109,99,255,0.14);
+  background:rgba(255,255,255,0.96);
+  font-size:16px;
+  outline:none;
+}
+textarea{min-height:96px;resize:vertical}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:900px){.form-row{grid-template-columns:1fr}}
+.post{
+  padding:14px;border-radius:18px;
+  border:1px solid rgba(109,99,255,0.14);
+  background:rgba(255,255,255,0.96);
+  display:grid;gap:6px;
+}
+.post .head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.post .time{color:var(--muted);font-size:12px}
+.post .msg{font-size:16px;line-height:1.55}
+.notice{
+  padding:12px 14px;border-radius:16px;
+  background:rgba(109,99,255,0.10);
+  border:1px solid rgba(109,99,255,0.18);
+  color:#2E2A78;font-size:14px;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 10px;border-radius:var(--pill);
+  background:rgba(255,255,255,0.85);
+  border:1px solid rgba(109,99,255,0.14);
+  font-size:13px;color:var(--muted);
+}
+.mood-row{display:flex;gap:10px;flex-wrap:wrap}
+.mood-btn{
+  flex:1 1 120px;
+  padding:12px 12px;
+  border-radius:16px;
+  border:1px solid rgba(109,99,255,0.14);
+  background:rgba(255,255,255,0.92);
+  cursor:pointer;
+  font-family:"Nunito",system-ui,sans-serif;
+  font-weight:900;
+}
+.mood-btn.active{
+  background:rgba(109,99,255,0.20);
+  border-color:rgba(109,99,255,0.22);
+}

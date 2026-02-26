@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Appreciation Wall</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="navbar">
+    <a class="brand" href="index.html">
+      <span class="brand-badge" aria-hidden="true"><strong>∞</strong></span>
+       A Positive Space
+    </a>
+    <nav class="navlinks" aria-label="Primary navigation">
+  <a id="nav-home" href="index.html">🏠︎ Home</a>
+  <a id="nav-generator" href="generator.html"><strong>ツ</strong>Compliment</a>
+  <a id="nav-mood" href="mood.html">𖡎 Mood Check in</a>
+  <a id="nav-wall" href="wall.html">❤ Appreciation Wall</a>
+</nav>
+  </div>
+</header>
+
+
+<main class="container">
+  <section class="card pad">
+    <h1>Appreciation Wall</h1>
+    
+    <div class="form-row" style="margin-top:10px">
+      <div><input id="wallSearch" type="search" placeholder="Search posts 🔎︎"></div>
+      <div><button class="btn warm" id="openWallPost" type="button" style="width:100%">New Post</button></div>
+    </div>
+
+    <div style="height:12px"></div>
+    <div id="wallList" style="display:grid;gap:10px"></div>
+  </section>
+
+  <div id="wallModal" style="display:none;position:fixed;inset:0;background:rgba(17,24,39,0.35);padding:20px;z-index:50">
+    <div class="card pad" style="max-width:560px;margin:8vh auto">
+      <h2>New Appreciation Post</h2>
+      <p class="small">Choose an Appreciation type or make your own.</p>
+
+      <label class="small" for="tpl">Appreciation Types:</label>
+      <select id="tpl">
+        <option>Thank you for being kind today — you made school better.</option>
+        <option>I appreciate your effort — keep going, you’ve got this.</option>
+        <option>Your positivity brightens everyone’s day.</option>
+        <option>You Helped someone today. Thank You.</option>
+      </select>
+
+      <div style="height:10px"></div>
+      <label class="small" for="addon">Optional add-on</label>
+      <input id="addon" maxlength="60" placeholder="Add something else to make it count...">
+
+      <div class="btn-row">
+        <button class="btn primary" id="saveWallPost" type="button">Post</button>
+        <button class="btn ghost" id="closeWallPost" type="button">Cancel</button>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="js/common.js"></script>
+<script src="js/data.js"></script>
+<script src="js/wall.js"></script>
+</body>
+</html>

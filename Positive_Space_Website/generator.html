@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Positive Space | Compliments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="navbar">
+    <a class="brand" href="index.html">
+      <span class="brand-badge" aria-hidden="true"><strong>∞</strong></span>
+       A Positive Space
+    </a>
+    <nav class="navlinks" aria-label="Primary navigation">
+  <a id="nav-home" href="index.html">🏠︎ Home</a>
+  <a id="nav-generator" href="generator.html"><strong>ツ</strong>Compliment</a>
+  <a id="nav-mood" href="mood.html">𖡎 Mood Check in</a>
+  <a id="nav-wall" href="wall.html">❤ Appreciation Wall</a>
+</nav>
+  </div>
+</header>
+
+
+<main class="container">
+  <div class="hero">
+    <section class="card pad">
+      <h1>Compliment Generator</h1>
+      <p class="small">Press the button to generate a compliment in a large, visually appealing card format.</p>
+
+      <div class="form-row" style="margin-top:10px">
+        <div>
+          <label class="small" for="category">Category (optional)</label>
+          <select id="category"></select>
+        </div>
+        <div>
+          <label class="small" for="tone">Tone</label>
+          <select id="tone">
+            <option value="default">Supportive</option>
+            <option value="fun">Fun</option>
+            <option value="calm">Calm</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <div class="output" aria-live="polite">
+        <div class="label">Your compliment</div>
+        <div class="text" id="complimentText">Click “Generate Compliment” to begin.</div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn warm" id="generateBtn" type="button">Generate Compliment</button>
+        <button class="btn ghost" id="copyBtn" type="button">Copy</button>
+        <button class="btn primary" id="favBtn" type="button">Save to Favourites</button>
+      </div>
+
+      <div style="height:12px"></div>
+      <div class="notice">Favourites are saved locally on this device only.</div>
+    </section>
+
+    
+  </div>
+</main>
+<script src="js/common.js"></script>
+<script src="js/data.js"></script>
+<script src="js/generator.js"></script>
+</body>
+</html>

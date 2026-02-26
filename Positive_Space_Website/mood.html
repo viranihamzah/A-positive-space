@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Positive Space | Mood Check</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="navbar">
+    <a class="brand" href="index.html">
+      <span class="brand-badge" aria-hidden="true"><strong>∞</strong></span>
+       A Positive Space
+    </a>
+    <nav class="navlinks" aria-label="Primary navigation">
+  <a id="nav-home" href="index.html">🏠︎ Home</a>
+  <a id="nav-generator" href="generator.html"><strong>ツ</strong>Compliment</a>
+  <a id="nav-mood" href="mood.html">𖡎 Mood Check in</a>
+  <a id="nav-wall" href="wall.html">❤ Appreciation Wall</a>
+</nav>
+  </div>
+</header>
+
+
+<main class="container">
+  <div class="hero">
+    <section class="card pad">
+      <h1>Mood Check</h1>
+      <p class="small">Select your mood using quick options and write a short note. This promotes emotional awareness and self-reflection.</p>
+
+      <div class="mood-row" style="margin-top:10px">
+        <button class="mood-btn" data-mood="Happy">😊 Happy</button>
+        <button class="mood-btn" data-mood="Neutral">😐 Neutral</button>
+        <button class="mood-btn" data-mood="Anxious">😟 Anxious</button>
+        <button class="mood-btn" data-mood="Stressed">😣 Stressed</button>
+      </div>
+
+      <div style="height:10px"></div>
+      <label class="small" for="moodNote">Optional note</label>
+      <textarea id="moodNote" maxlength="160" placeholder="Include a short reflection"></textarea>
+
+      <div class="btn-row">
+        <button class="btn primary" id="saveMoodBtn" type="button">Save Mood</button>
+        <a class="btn warm" href="generator.html">Generate Compliment</a>
+      </div>
+
+      <div style="height:12px"></div>
+      <div class="notice" id="moodSaved">Nothing saved yet.</div>
+    </section>
+
+    
+  </div>
+</main>
+<script src="js/common.js"></script>
+<script src="js/data.js"></script>
+<script src="js/mood.js"></script>
+</body>
+</html>
